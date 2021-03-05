@@ -1,0 +1,19 @@
+{
+	"name": "datesuggest-server",
+	"description": "Suggest date strings of recent dates (server)",
+	"version": "1.0.0",
+	"author": "Takamasa Oshikiri",
+	"license": "MIT",
+	"engines": {
+		"node": "*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/oshikiri/vscode-datesuggest"
+	},
+	"dependencies": {
+		"dayjs": "^1.9.5",
+		"vscode-languageserver": "^5.2.1"
+	},
+	"scripts": {}
+}
