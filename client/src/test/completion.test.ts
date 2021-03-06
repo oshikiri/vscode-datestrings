@@ -45,7 +45,7 @@ describe("when completion is enabled in a ledger file", () => {
       );
     });
   });
-  context("when dateFormat = \"MMMM D, YYYY\"", () => {
+  context('when dateFormat = "MMMM D, YYYY"', () => {
     it("should return completion list", async () => {
       const settingsUpdate = {
         "datestrings.maxDaysBefore": 3,

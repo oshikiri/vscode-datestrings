@@ -37,9 +37,7 @@ export function activate(context: ExtensionContext) {
 
   // Options to control the language client
   let clientOptions: LanguageClientOptions = {
-    documentSelector: [
-      { scheme: "file" },
-    ],
+    documentSelector: [{ scheme: "file" }],
     synchronize: {
       // Notify the server about file changes to '.clientrc files contained in the workspace
       fileEvents: workspace.createFileSystemWatcher("**/.clientrc"),
