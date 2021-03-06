@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: |
         npm ci
-        npm package
+        npm run package
 
     - uses: ncipollo/release-action@v1
       with:
