@@ -18,8 +18,7 @@
     "vscode": "^1.51.0"
   },
   "activationEvents": [
-    "onLanguage:ledger",
-    "onLanguage:yaml"
+    "*"
   ],
   "main": "./client/out/extension",
   "contributes": {
@@ -52,18 +51,7 @@
           "description": "Specify base date (for testing)"
         }
       }
-    },
-    "languages": [
-      {
-        "id": "ledger",
-        "aliases": [
-          "Ledger journal"
-        ],
-        "extensions": [
-          ".ledger"
-        ]
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "cd client && cd .. && npm run compile",
