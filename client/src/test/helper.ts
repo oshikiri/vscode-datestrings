@@ -12,7 +12,7 @@ export let documentEol: string;
 export let platformEol: string;
 
 export async function activate(docUri: vscode.Uri) {
-  const ext = vscode.extensions.getExtension("oshikiri.datesuggest")!;
+  const ext = vscode.extensions.getExtension("oshikiri.datestrings")!;
   await ext.activate();
   try {
     doc = await vscode.workspace.openTextDocument(docUri);

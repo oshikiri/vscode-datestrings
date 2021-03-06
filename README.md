@@ -1,7 +1,7 @@
-datesuggest
+datestrings
 =====
 
-[![Status of test workflow](https://github.com/oshikiri/vscode-datesuggest/workflows/test/badge.svg)](https://github.com/oshikiri/vscode-datesuggest/actions?query=workflow%3Atest)
+[![Status of test workflow](https://github.com/oshikiri/vscode-datestrings/workflows/test/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Atest)
 
 
 ![Format1: YYYY-MM-DD](./doc/images/YYYY-MM-DD.png)

@@ -1,5 +1,5 @@
 {
-	"name": "datesuggest-client",
+	"name": "datestrings-client",
 	"description": "Suggest date strings of recent dates (client)",
 	"author": "Takamasa Oshikiri",
 	"license": "MIT",
@@ -7,7 +7,7 @@
 	"publisher": "vscode",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/oshikiri/vscode-datesuggest"
+		"url": "https://github.com/oshikiri/vscode-datestrings"
 	},
 	"engines": {
 		"vscode": "^1.51.0"

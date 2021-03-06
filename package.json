@@ -1,12 +1,12 @@
 {
-  "name": "datesuggest",
+  "name": "datestrings",
   "description": "Suggest date strings of recent dates",
   "author": "Takamasa Oshikiri",
   "license": "MIT",
   "version": "1.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oshikiri/vscode-datesuggest"
+    "url": "https://github.com/oshikiri/vscode-datestrings"
   },
   "publisher": "oshikiri",
   "categories": [],
@@ -25,27 +25,27 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "datesuggest",
+      "title": "datestrings",
       "properties": {
-        "datesuggest.maxDaysBefore": {
+        "datestrings.maxDaysBefore": {
           "scope": "resource",
           "type": "number",
           "default": 27,
           "description": "Add dates from ${maxDaysBefore} days ago to yesterday"
         },
-        "datesuggest.maxDaysAfter": {
+        "datestrings.maxDaysAfter": {
           "scope": "resource",
           "type": "number",
           "default": 7,
           "description": "Add dates from tomorrow to ${maxDaysAfter} days after"
         },
-        "datesuggest.dateFormat": {
+        "datestrings.dateFormat": {
           "scope": "resource",
           "type": "string",
           "default": "YYYY/MM/DD",
           "description": "See https://day.js.org/docs/en/display/format"
         },
-        "datesuggest.today": {
+        "datestrings.today": {
           "scope": "resource",
           "type": "string",
           "default": "",

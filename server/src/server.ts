@@ -10,8 +10,8 @@ import {
 import { createCompletionItem } from "./dateutils";
 import { range } from "./utils";
 import {
-  DateSuggestConfigurations,
-  defaultDateSuggestConfigurations,
+  DateStringsConfigurations,
+  defaultDateStringsConfigurations,
 } from "./configuration";
 import * as dayjs from "dayjs";
 
@@ -55,15 +55,15 @@ connection.onInitialized(() => {
   }
 });
 
-let globalSettings: DateSuggestConfigurations = defaultDateSuggestConfigurations;
+let globalSettings: DateStringsConfigurations = defaultDateStringsConfigurations;
 let documentSettings: Map<
   string,
-  Thenable<DateSuggestConfigurations>
+  Thenable<DateStringsConfigurations>
 > = new Map();
 
 function getDocumentSettings(
   resource: string
-): Thenable<DateSuggestConfigurations> {
+): Thenable<DateStringsConfigurations> {
   if (!hasConfigurationCapability) {
     return Promise.resolve(globalSettings);
   }
@@ -71,7 +71,7 @@ function getDocumentSettings(
   if (!result) {
     result = connection.workspace.getConfiguration({
       scopeUri: resource,
-      section: "datesuggest",
+      section: "datestrings",
     });
     documentSettings.set(resource, result);
   }
