@@ -55,7 +55,8 @@
   },
   "scripts": {
     "vscode:prepublish": "cd client && cd .. && npm run compile",
-    "format": "./node_modules/.bin/prettier --write {client,server}/**/*.ts",
+    "format": "./node_modules/.bin/prettier --list-different --write {client,server}/**/*.ts",
+    "precompile": "npm run format",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
     "package": "./node_modules/.bin/vsce package",
