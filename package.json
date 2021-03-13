@@ -1,6 +1,7 @@
 {
   "name": "datestrings",
-  "description": "Suggest date strings of recent dates",
+  "displayName": "Autocomplete datestrings",
+  "description": "Autocomplete recent dates on VS Code",
   "author": "Takamasa Oshikiri",
   "license": "MIT",
   "version": "1.1.0",
