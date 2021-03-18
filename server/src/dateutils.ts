@@ -1,8 +1,7 @@
 import { CompletionItem, CompletionItemKind } from "vscode-languageserver";
 import dayjs = require("dayjs");
 
-// TODO: Add test cases
-function dateDiffString(diff: number): string {
+export function dateDiffString(diff: number): string {
   if (diff == 0) {
     return "today";
   } else if (diff > 0) {
