@@ -62,13 +62,14 @@
     "watch": "tsc -b -w",
     "package": "./node_modules/.bin/vsce package",
     "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
-    "test": "sh ./scripts/e2e.sh"
+    "test": "mocha --require ts-node/register --recursive server/**/*.test.ts"
   },
   "devDependencies": {
     "@types/mocha": "^8.2.1",
     "@types/node": "^14.14.34",
     "mocha": "^8.3.2",
     "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
     "vsce": "^1.87.0"
   }
