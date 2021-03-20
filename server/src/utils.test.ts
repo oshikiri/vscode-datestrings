@@ -15,9 +15,11 @@ context("utils", () => {
       });
     });
 
-    context.skip("when (-1, 1)", () => {
-      it("throws", () => {
-        assert.throws(() => utils.range(-1, 1));
+    context("when (-1, 1)", () => {
+      it("throws an error", () => {
+        assert.throws(() => utils.range(-1, 1), {
+          message: "Argument 'from' is negative",
+        });
       });
     });
   });

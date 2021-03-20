@@ -1,5 +1,9 @@
-// FIXME: assertion to negative args
+import { strict as assert } from "assert";
+
 export function range(from: number, to: number): number[] {
+  assert.ok(from >= 0, "Argument 'from' is negative");
+  assert.ok(to >= 0, "Argument 'to' is negative");
+
   const negatives = Array.from(Array(from).keys())
     .slice(1)
     .map((x) => -x)
