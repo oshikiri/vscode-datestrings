@@ -2,6 +2,7 @@
   "name": "datestrings",
   "displayName": "Autocomplete datestrings",
   "description": "Autocomplete recent dates on VS Code",
+  "icon": "icon.png",
   "author": "Takamasa Oshikiri",
   "license": "MIT",
   "version": "1.1.1",
