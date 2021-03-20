@@ -27,7 +27,7 @@ describe("when completion is enabled in a ledger file", () => {
             {
               label: "2015/12/31",
               kind: vscode.CompletionItemKind.Text,
-              documentation: "Thursday\n1 days ago",
+              documentation: "Thursday\nyesterday",
             },
             {
               label: "2016/01/01",
@@ -37,7 +37,7 @@ describe("when completion is enabled in a ledger file", () => {
             {
               label: "2016/01/02",
               kind: vscode.CompletionItemKind.Text,
-              documentation: "Saturday\n1 days after",
+              documentation: "Saturday\ntomorrow",
             },
           ],
         },
@@ -67,7 +67,7 @@ describe("when completion is enabled in a ledger file", () => {
             {
               label: "December 31, 2015",
               kind: vscode.CompletionItemKind.Text,
-              documentation: "Thursday\n1 days ago",
+              documentation: "Thursday\nyesterday",
             },
             {
               label: "January 1, 2016",
@@ -77,7 +77,7 @@ describe("when completion is enabled in a ledger file", () => {
             {
               label: "January 2, 2016",
               kind: vscode.CompletionItemKind.Text,
-              documentation: "Saturday\n1 days after",
+              documentation: "Saturday\ntomorrow",
             },
           ],
         },
