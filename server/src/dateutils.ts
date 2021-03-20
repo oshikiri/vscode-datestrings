@@ -1,14 +1,20 @@
 import { CompletionItem, CompletionItemKind } from "vscode-languageserver";
-import dayjs = require("dayjs");
+import * as dayjs from "dayjs";
 
-// TODO: Add test cases
 export function dateDiffString(diff: number): string {
-  if (diff == 0) {
-    return "today";
-  } else if (diff > 0) {
-    return `${diff} days after`;
+  let dateDescription = "";
+  if (diff < -1) {
+    dateDescription = `${-diff} days ago`;
+  } else if (diff == -1) {
+    dateDescription = "yesterday";
+  } else if (diff == 0) {
+    dateDescription = "today";
+  } else if (diff == 1) {
+    dateDescription = "tomorrow";
+  } else if (diff > 1) {
+    dateDescription = `${diff} days after`;
   }
-  return `${-diff} days ago`;
+  return dateDescription;
 }
 
 export function createCompletionItem(
