@@ -8,8 +8,8 @@ describe("when completion is enabled in a ledger file", () => {
   context("when dateFormat = undefined (default)", () => {
     it.skip("should return completion list", async () => {
       const settingsUpdate = {
-        "datestrings.maxDaysBefore": 3,
-        "datestrings.maxDaysAfter": 2,
+        "datestrings.maxDaysBefore": 2,
+        "datestrings.maxDaysAfter": 1,
         "datestrings.today": "2016-01-01",
         "datestrings.dateFormat": "YYYY/MM/DD", // FIXME
       };
@@ -48,8 +48,8 @@ describe("when completion is enabled in a ledger file", () => {
   context('when dateFormat = "MMMM D, YYYY"', () => {
     it("should return completion list", async () => {
       const settingsUpdate = {
-        "datestrings.maxDaysBefore": 3,
-        "datestrings.maxDaysAfter": 2,
+        "datestrings.maxDaysBefore": 2,
+        "datestrings.maxDaysAfter": 1,
         "datestrings.today": "2016-01-01",
         "datestrings.dateFormat": "MMMM D, YYYY",
       };
