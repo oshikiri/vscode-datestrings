@@ -1,7 +1,7 @@
-datestrings
+Autocomplete datestrings
 =====
 
-[![Status of test workflow](https://github.com/oshikiri/vscode-datestrings/workflows/test/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Atest) [![Status of publish workflow](https://github.com/oshikiri/vscode-datestrings/workflows/publish/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Apublish)
+[![Marketplace](https://vsmarketplacebadge.apphb.com/version/oshikiri.datestrings.svg)](https://marketplace.visualstudio.com/items?itemName=oshikiri.datestrings) [![Status of test workflow](https://github.com/oshikiri/vscode-datestrings/workflows/test/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Atest) [![Status of publish workflow](https://github.com/oshikiri/vscode-datestrings/workflows/publish/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Apublish)
 
 
 ![Format1: YYYY-MM-DD](./doc/images/YYYY-MM-DD.png)
