@@ -6,6 +6,11 @@
 **/tsconfig.base.json
 contributing.md
 
+.github/
+doc/
+**/*.test.js
+**/*.test.ts
+
 server/node_modules/dayjs/esm/locale/**
 server/node_modules/dayjs/esm/plugin/**
 server/node_modules/dayjs/locale/**
