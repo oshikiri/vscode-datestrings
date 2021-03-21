@@ -11,9 +11,11 @@
     "url": "https://github.com/oshikiri/vscode-datestrings"
   },
   "publisher": "oshikiri",
-  "categories": [],
+  "categories": [
+    "Snippets"
+  ],
   "keywords": [
-    "multi-root ready"
+    "keybindings"
   ],
   "engines": {
     "nodejs": "^14",
