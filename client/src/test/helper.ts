@@ -1,8 +1,3 @@
-/* --------------------------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- * ------------------------------------------------------------------------------------------ */
-
 import * as vscode from "vscode";
 import * as path from "path";
 
@@ -12,7 +7,8 @@ export let documentEol: string;
 export let platformEol: string;
 
 export async function activate(docUri: vscode.Uri) {
-  const ext = vscode.extensions.getExtension("oshikiri.datestrings")!;
+  const extentionId = "oshikiri.datestrings";
+  const ext = vscode.extensions.getExtension(extentionId)!;
   await ext.activate();
   try {
     doc = await vscode.workspace.openTextDocument(docUri);
