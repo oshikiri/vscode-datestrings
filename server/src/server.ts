@@ -6,7 +6,9 @@ import {
   DidChangeConfigurationNotification,
   CompletionItem,
   TextDocumentPositionParams,
-} from "vscode-languageserver";
+  TextDocumentSyncKind,
+} from "vscode-languageserver/node";
+import { TextDocument } from "vscode-languageserver-textdocument";
 import { createCompletionItem } from "./dateutils";
 import { range } from "./utils";
 import {
@@ -16,7 +18,7 @@ import {
 import * as dayjs from "dayjs";
 
 let connection = createConnection(ProposedFeatures.all);
-let documents: TextDocuments = new TextDocuments();
+let documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument);
 
 let hasConfigurationCapability: boolean = false;
 let hasWorkspaceFolderCapability: boolean = false;
@@ -33,7 +35,7 @@ connection.onInitialize((params: InitializeParams) => {
 
   return {
     capabilities: {
-      textDocumentSync: documents.syncKind,
+      textDocumentSync: TextDocumentSyncKind.Incremental,
       completionProvider: {
         resolveProvider: true,
       },
@@ -55,7 +57,8 @@ connection.onInitialized(() => {
   }
 });
 
-let globalSettings: DateStringsConfigurations = defaultDateStringsConfigurations;
+let globalSettings: DateStringsConfigurations =
+  defaultDateStringsConfigurations;
 let documentSettings: Map<
   string,
   Thenable<DateStringsConfigurations>
@@ -101,11 +104,9 @@ connection.onCompletion(
     createSuggestList(textDocumentPosition.textDocument.uri)
 );
 
-connection.onCompletionResolve(
-  (item: CompletionItem): CompletionItem => {
-    return item;
-  }
-);
+connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
+  return item;
+});
 
 documents.listen(connection);
 connection.listen();
