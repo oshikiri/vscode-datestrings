@@ -59,11 +59,11 @@
   },
   "scripts": {
     "vscode:prepublish": "cd client && cd .. && npm run compile",
-    "format": "./node_modules/.bin/prettier --list-different --write {client,server}/**/*.ts **/package.json",
+    "format": "prettier --list-different --write {client,server}/**/*.ts **/package.json",
     "precompile": "npm run format",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
-    "package": "./node_modules/.bin/vsce package",
+    "package": "vsce package",
     "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
     "test": "mocha --require ts-node/register --recursive server/**/*.test.ts"
   },
