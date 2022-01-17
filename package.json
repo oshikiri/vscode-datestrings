@@ -22,7 +22,7 @@
     "vscode": "^1.60.0"
   },
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./client/out/extension",
   "contributes": {
