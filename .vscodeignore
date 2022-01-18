@@ -11,14 +11,3 @@ doc/
 **/*.test.js
 **/*.test.ts
 
-server/node_modules/dayjs/esm/locale/**
-server/node_modules/dayjs/esm/plugin/**
-server/node_modules/dayjs/locale/**
-server/node_modules/dayjs/plugin/**
-
-client/node_modules/**
-!client/node_modules/vscode-jsonrpc/**
-!client/node_modules/vscode-languageclient/**
-!client/node_modules/vscode-languageserver-protocol/**
-!client/node_modules/vscode-languageserver-types/**
-!client/node_modules/semver/**
