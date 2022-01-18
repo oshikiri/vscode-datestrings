@@ -60,7 +60,6 @@
   "scripts": {
     "vscode:prepublish": "cd client && cd .. && npm run compile",
     "format": "prettier --list-different --write {client,server}/**/*.ts **/package.json",
-    "precompile": "npm run format",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
     "package": "vsce package",
