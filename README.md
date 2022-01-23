@@ -7,10 +7,6 @@ Autocomplete datestrings
 ![Format1: YYYY-MM-DD](./doc/images/YYYY-MM-DD.png)
 ![Format2: MMMM D, YYYY](./doc/images/MMMM_D_YYYY.png)
 
-## Packaging
-```shell
-npm run package
-```
 
 ## License
 
