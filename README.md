@@ -1,7 +1,7 @@
 Autocomplete datestrings
 =====
 
-[![Marketplace](https://vsmarketplacebadge.apphb.com/version/oshikiri.datestrings.svg)](https://marketplace.visualstudio.com/items?itemName=oshikiri.datestrings) [![Status of test workflow](https://github.com/oshikiri/vscode-datestrings/workflows/test/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Atest) [![Status of publish workflow](https://github.com/oshikiri/vscode-datestrings/workflows/publish/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Apublish)
+[![Marketplace](https://vsmarketplacebadges.dev/version/oshikiri.datestrings.png)](https://marketplace.visualstudio.com/items?itemName=oshikiri.datestrings) [![Status of test workflow](https://github.com/oshikiri/vscode-datestrings/workflows/test/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Atest) [![Status of publish workflow](https://github.com/oshikiri/vscode-datestrings/workflows/publish/badge.svg)](https://github.com/oshikiri/vscode-datestrings/actions?query=workflow%3Apublish)
 
 
 Autocomplete date strings on VS Code
