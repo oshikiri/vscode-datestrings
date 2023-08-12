@@ -18,7 +18,7 @@
     "keybindings"
   ],
   "engines": {
-    "nodejs": "^14",
+    "nodejs": "^18",
     "vscode": "^1.60.0"
   },
   "activationEvents": [
@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
-    "@types/node": "^14.17.0",
+    "@types/node": "^18",
     "mocha": "^10.2.0",
     "prettier": "^3.0.1",
     "ts-node": "^10.9.1",
