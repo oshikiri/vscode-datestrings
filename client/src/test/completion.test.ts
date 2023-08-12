@@ -41,7 +41,7 @@ describe("when completion is enabled in a ledger file", () => {
             },
           ],
         },
-        settingsUpdate
+        settingsUpdate,
       );
     });
   });
@@ -81,7 +81,7 @@ describe("when completion is enabled in a ledger file", () => {
             },
           ],
         },
-        settingsUpdate
+        settingsUpdate,
       );
     });
   });
@@ -91,7 +91,7 @@ async function testCompletion(
   docUri: vscode.Uri,
   position: vscode.Position,
   expectedCompletionList: vscode.CompletionList,
-  settingsUpdate: Object
+  settingsUpdate: Object,
 ) {
   await activate(docUri);
 
@@ -104,12 +104,12 @@ async function testCompletion(
   const actualCompletionList = (await vscode.commands.executeCommand(
     "vscode.executeCompletionItemProvider",
     docUri,
-    position
+    position,
   )) as vscode.CompletionList;
 
   assert.strictEqual(
     actualCompletionList.items.length,
-    expectedCompletionList.items.length
+    expectedCompletionList.items.length,
   );
   expectedCompletionList.items.forEach((expectedItem, i) => {
     const actualItem = actualCompletionList.items[i];
