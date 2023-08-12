@@ -20,7 +20,7 @@ export function dateDiffString(diff: number): string {
 export function createCompletionItem(
   today: dayjs.Dayjs,
   diff: number,
-  dayjsFormat: string
+  dayjsFormat: string,
 ): CompletionItem {
   const day = today.add(diff, "day");
   const label = day.format(dayjsFormat);

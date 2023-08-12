@@ -47,7 +47,7 @@ connection.onInitialized(() => {
   if (hasConfigurationCapability) {
     connection.client.register(
       DidChangeConfigurationNotification.type,
-      undefined
+      undefined,
     );
   }
   if (hasWorkspaceFolderCapability) {
@@ -65,7 +65,7 @@ let documentSettings: Map<
 > = new Map();
 
 function getDocumentSettings(
-  resource: string
+  resource: string,
 ): Thenable<DateStringsConfigurations> {
   if (!hasConfigurationCapability) {
     return Promise.resolve(globalSettings);
@@ -93,15 +93,15 @@ async function createSuggestList(uri: string): Promise<CompletionItem[]> {
   const dateDiffRange = range(settings.maxDaysBefore, settings.maxDaysAfter);
   const today = dayjs(settings.today === "" ? undefined : settings.today);
   return dateDiffRange.map((diff) =>
-    createCompletionItem(today, diff, settings.dateFormat)
+    createCompletionItem(today, diff, settings.dateFormat),
   );
 }
 
 connection.onCompletion(
   (
-    textDocumentPosition: TextDocumentPositionParams
+    textDocumentPosition: TextDocumentPositionParams,
   ): Promise<CompletionItem[]> =>
-    createSuggestList(textDocumentPosition.textDocument.uri)
+    createSuggestList(textDocumentPosition.textDocument.uri),
 );
 
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
