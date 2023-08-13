@@ -11,3 +11,7 @@ doc/
 **/*.test.js
 **/*.test.ts
 
+scripts/
+
+client/out/test/
+client/testFixture/
