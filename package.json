@@ -67,7 +67,7 @@
     "test": "mocha --require ts-node/register --recursive server/**/*.test.ts"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.1",
+    "@types/mocha": "^10.0.2",
     "@types/node": "^20.8",
     "mocha": "^10.2.0",
     "prettier": "^3.0.3",
