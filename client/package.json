@@ -10,7 +10,7 @@
     "url": "https://github.com/oshikiri/vscode-datestrings"
   },
   "engines": {
-    "vscode": "^1.60.0"
+    "vscode": "^1.95.0"
   },
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
