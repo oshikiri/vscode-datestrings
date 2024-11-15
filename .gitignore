@@ -2,6 +2,7 @@
 .vscode-test/
 
 node_modules/
+tsconfig.tsbuildinfo
 
 server/node_modules/
 server/out/
