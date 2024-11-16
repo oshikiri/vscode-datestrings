@@ -18,7 +18,7 @@
     "keybindings"
   ],
   "engines": {
-    "nodejs": "^20.4.10",
+    "nodejs": "^22",
     "vscode": "^1.60.0"
   },
   "activationEvents": [
