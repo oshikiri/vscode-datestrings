@@ -1,5 +1,5 @@
 import { CompletionItem, CompletionItemKind } from "vscode-languageserver";
-import * as dayjs from "dayjs";
+import { MyDateTime } from "./MyDateTime";
 
 export function dateDiffString(diff: number): string {
   let dateDescription = "";
@@ -18,12 +18,12 @@ export function dateDiffString(diff: number): string {
 }
 
 export function createCompletionItem(
-  today: dayjs.Dayjs,
+  today: MyDateTime,
   diff: number,
-  dayjsFormat: string,
+  datetimeFormat: string,
 ): CompletionItem {
   const day = today.add(diff, "day");
-  const label = day.format(dayjsFormat);
+  const label = day.format(datetimeFormat);
   const documentation = [day.format("dddd"), dateDiffString(diff)].join("\n");
   return {
     label,

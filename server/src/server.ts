@@ -15,7 +15,7 @@ import {
   DateStringsConfigurations,
   defaultDateStringsConfigurations,
 } from "./configuration";
-import * as dayjs from "dayjs";
+import { MyDateTime } from "./MyDateTime";
 
 let connection = createConnection(ProposedFeatures.all);
 let documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument);
@@ -91,7 +91,9 @@ async function createSuggestList(uri: string): Promise<CompletionItem[]> {
   if (settings == undefined) return [] as CompletionItem[];
 
   const dateDiffRange = range(settings.maxDaysBefore, settings.maxDaysAfter);
-  const today = dayjs(settings.today === "" ? undefined : settings.today);
+  const today = new MyDateTime(
+    settings.today === "" ? undefined : settings.today,
+  );
   return dateDiffRange.map((diff) =>
     createCompletionItem(today, diff, settings.dateFormat),
   );
