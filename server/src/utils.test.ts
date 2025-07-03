@@ -18,7 +18,7 @@ context("utils", () => {
     context("when (-1, 1)", () => {
       it("throws an error", () => {
         assert.throws(() => utils.range(-1, 1), {
-          message: "Argument 'from' is negative",
+          message: "Arguments 'from' and 'to' must be non-negative.",
         });
       });
     });
