@@ -63,6 +63,7 @@
     "compile": "tsc -b",
     "watch": "tsc -b -w",
     "package": "vsce package",
+    "pretest": "prettier --check .",
     "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
     "test": "mocha --require ts-node/register --recursive server/**/*.test.ts"
   },
