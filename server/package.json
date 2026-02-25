@@ -12,9 +12,9 @@
     "url": "https://github.com/oshikiri/vscode-datestrings"
   },
   "dependencies": {
-    "dayjs": "^1.11.13",
-    "vscode-languageserver": "^9.0.1",
-    "vscode-languageserver-textdocument": "^1.0.12"
+    "dayjs": "1.11.13",
+    "vscode-languageserver": "9.0.1",
+    "vscode-languageserver-textdocument": "1.0.12"
   },
   "scripts": {}
 }
