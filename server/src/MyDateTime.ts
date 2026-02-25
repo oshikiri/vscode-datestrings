@@ -1,5 +1,9 @@
 import * as dayjs from "dayjs";
 
+/**
+ * A wrapper around the dayjs library to provide a simplified interface for date manipulation.
+ * This wraps dayjs for ease of testing and potential future extensions or replacements.
+ */
 export class MyDateTime {
   private dayjsInstance: dayjs.Dayjs;
 
@@ -7,18 +11,20 @@ export class MyDateTime {
    * Initializes a new MyDateTime instance.
    *
    * @param date - The date to wrap. Can be:
-   *   - a date string
-   *
-   *   If omitted, the current date and time will be used.
+   *  - a date string
+   *  - undefined (which will use the current date and time)
    */
-  constructor(date?: string | number | Date | dayjs.Dayjs) {
+  constructor(date?: string) {
     this.dayjsInstance = dayjs(date);
   }
 
   add(value: number, unit: string): MyDateTime {
-    return new MyDateTime(
-      this.dayjsInstance.add(value, convertToDayJsUnit(unit)),
+    const newDateTime = new MyDateTime();
+    newDateTime.dayjsInstance = this.dayjsInstance.add(
+      value,
+      convertToDayJsUnit(unit),
     );
+    return newDateTime;
   }
 
   format(formatString: string): string {
@@ -26,12 +32,6 @@ export class MyDateTime {
   }
 }
 
-/**
- * Converts a string unit to a dayjs ManipulateType.
- * @param unit - The unit string (e.g., 'day', 'month', 'year').
- * @returns The corresponding dayjs ManipulateType.
- * @throws Error if the unit is unsupported.
- */
 /**
  * Converts a string unit to a dayjs ManipulateType.
  * @param unit - The unit string (e.g., 'day', 'month', 'year').

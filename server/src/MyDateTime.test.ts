@@ -7,6 +7,11 @@ describe("MyDateTime", () => {
       const date = new MyDateTime("2024-01-01");
       assert.equal(date.format("YYYY-MM-DD"), "2024-01-01");
     });
+
+    it("initializes with undefined", () => {
+      const date = new MyDateTime(undefined);
+      assert.match(date.format("YYYY-MM-DD"), /^\d{4}-\d{2}-\d{2}$/);
+    });
   });
 
   describe("#add", () => {
